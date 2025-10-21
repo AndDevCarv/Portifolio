@@ -38,7 +38,7 @@ button:hover, a:hover {
     
 }
 
-li {
+.itens > li {
     all: unset;
     font-size: 20px;
 }
