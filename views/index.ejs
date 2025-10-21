@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - André Carvalho</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+
+    <main>
+      <div class="template" id="template">
+        <div class="card-template">
+          <h1>Analista de Sistemas e Consultor IOT</h1>
+        </div>
+      </div>
+      <div class="principal">
+        <p>
+          Consultor de redes e desenvolvedor web. No dia a dia, resolvo desafios
+          de infraestrutura; à noite, crio sites e aprimoro minhas habilidades
+          em web.
+        </p>
+        <img
+          class="rack-image"
+          src="images/IMG-20250313-WA0025.jpg"
+          alt="img organizando rack"
+        />
+      </div>
+      <div class="readme" id="readme">
+        <h2>Readme</h2>
+        <p class="readme-text">
+          Graduado em Análise e Desenvolvimento de Sistemas e atualmente
+          cursando Pós-Graduação em Engenharia de Software. No dia, vivo no
+          mundo da infraestrutura de redes garantindo que tudo funcione com
+          estabilidade e segurança. À noite, mergulho no desenvolvimento web,
+          criando sites, explorando novas tecnologias e transformando ideias em
+          soluções digitais. Curioso por natureza minha missão é unir
+          experiência técnica e criatividade para entregar projetos que sejam
+          eficientes, escaláveis e visualmente impactantes.
+        </p>
+      </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

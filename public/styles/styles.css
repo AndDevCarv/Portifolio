@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#readme, #template {
+    scroll-margin-top: 130px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+
+button, a {
+    all: unset;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    color: #000000;
+    transition: 0.2s ease-in-out;
+    
+}
+
+li {
+    all: unset;
+    font-size: 20px;
+}
+
+h1, h2 {
+    font-weight: 50;
+}
+
+body {
+    margin: 0;
+    padding-top: 150px;
+    background: linear-gradient(to right ,#000000, #a1a4a8);
+    animation: gradientMove 25s ease infinite;
+    background-size: 250% 250%;
+    color: aliceblue;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.svg-white {
+    filter: brightness(0) saturate(100%) invert(100%);
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.logo {
+    padding-right: 30px;
+}
+
+.template {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    place-items: center;
+    margin-bottom: 70px;
+}   
+
+.card-template {
+    grid-column: span 2;
+}
+
+.card-template > h1 {
+    font-size: 50px;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.principal > p {
+    font-weight: 300;
+    font-size: 35px;
+    width: 460px;
+    margin-left: 8em;
+} 
+
+.rack-image {
+    height: 450px;
+    border-radius: 7px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+    margin-left: 9em;
+}
+
+.readme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+}
+
+.readme > p {
+    font-size: 22px;
+    font-weight: 200;
+    width: 50%;
+    text-align: center;
+}
+
+
+
+footer {
+    margin-top: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
