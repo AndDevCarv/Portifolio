@@ -30,12 +30,11 @@ header {
 button, a {
     all: unset;
     cursor: pointer;
+    transition: color 0.2s ease-in-out;
 }
 
 button:hover, a:hover {
     color: #000000;
-    transition: 0.2s ease-in-out;
-    
 }
 
 .itens > li {
@@ -156,6 +155,7 @@ body {
 }
 
 .post {
+    max-width: 40em;
     position: relative;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
@@ -177,4 +177,29 @@ body {
     pointer-events: none;
     z-index: 0;
 
+}
+
+.post-title {
+    transition: color 1s ease-out, font-weight 1s ease-out;
+}
+
+.post-title:hover {
+    color: aliceblue;
+    font-weight: 200;
+}
+
+.opened-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.open-post {
+    max-width: 60em;
+}
+
+.delete-button {
+    margin-left: 25px;
 }

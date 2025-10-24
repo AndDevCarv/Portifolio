@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - André Carvalho</title>
+    <link rel="stylesheet" href="/styles/styles.css"/>
+</head>
+<body>
+    <main>
+        <%- include("partials/header.ejs") %>
+        <section class="opened-posts">
+            <article class="open-post">
+                <h2>Aprendendo node</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio excepturi labore dolorem accusantium, quos itaque quia mollitia quisquam adipisci! Optio non dolore sapiente totam eaque accusamus harum delectus at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae possimus nesciunt esse minima culpa omnis cumque deserunt voluptates at consequatur voluptas suscipit nisi, debitis totam, optio quaerat temporibus a! !Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil mollitia, dolore fugiat, at temporibus saepe commodi itaque, soluta omnis nostrum cupiditate! Sed id aperiam sapiente praesentium consequatur ipsam ducimus adipisci.</p>
+                <div class="button-box">
+                    <a><button class="edit-button">Editar</button></a>
+                    <a><button class="delete-button">Deletar</button></a>
+                </div>
+                <footer class="post-footer">
+                    <p>Publicado por Andre</p>
+                </footer>
+            </article>
+        </section>
+        <%- include("partials/footer.ejs") %>
+    </main>
+</body>
+</html>
