@@ -33,6 +33,11 @@ button, a {
     transition: color 0.2s ease-in-out;
 }
 
+input, textarea {
+    all: unset;
+    cursor: auto;
+}
+
 button:hover, a:hover {
     color: #000000;
 }
@@ -202,4 +207,28 @@ body {
 
 .delete-button {
     margin-left: 25px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form > input, textarea{
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 45em;
+}
+
+.prev > input {
+    height: 6em;
+}
+
+.prev, .texxt {
+    resize: none;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }

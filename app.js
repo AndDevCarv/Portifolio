@@ -24,6 +24,10 @@ app.get("/post.ejs", (req, res) => {
     res.render("post.ejs")
 })
 
+app.get("/createPost.ejs", (req, res) => {
+    res.render("createPost.ejs")
+})
+
 app.listen(port, () =>{
     console.log(`running on ${port}`);
 })
