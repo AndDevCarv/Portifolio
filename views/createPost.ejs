@@ -9,24 +9,25 @@
 <body>
     <main>
         <%- include("partials/header.ejs") %>
-        <form>
+
+        <form action="/controller/postControl.js" method="post">
             <div class="form title">
-                <label>Título</label>
-                <input type="text">
+                <label for="post-title">Título</label>
+                <input type="text" id="post-title" name="post-title" required>
             </div>
 
             <div class="form prev">
-                <label>Prévia</label>
-                <textarea rows="3" cols="60" ></textarea>
+                <label for="post-prev">Prévia</label>
+                <textarea rows="3" cols="60" id="post-prev" name="post-prev"></textarea>
             </div>
 
             <div class="form texxt">
-                <label>Texto</label>
-                <textarea rows="30" cols="60"></textarea>
+                <label for="post-texxt">Texto</label>
+                <textarea rows="30" cols="60" id="post-prev" name="post-prev"></textarea>
             </div>
-            <div class="form"><button>Postar</button></div>
-            
+            <div class="form"><button type="submit">Postar</button></div>  
         </form>
+
         <%- include("partials/footer.ejs") %>
     </main>
 </body>
