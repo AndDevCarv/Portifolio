@@ -10,20 +10,20 @@
     <main>
         <%- include("partials/header.ejs") %>
 
-        <form action="/controller/postControl.js" method="post">
+        <form action="/add" method="post">
             <div class="form title">
-                <label for="post-title">Título</label>
-                <input type="text" id="post-title" name="post-title" required>
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" required>
             </div>
 
             <div class="form prev">
-                <label for="post-prev">Prévia</label>
-                <textarea rows="3" cols="60" id="post-prev" name="post-prev"></textarea>
+                <label for="prev">Prévia</label>
+                <textarea rows="3" cols="60" id="prev" name="prev"></textarea>
             </div>
 
             <div class="form texxt">
-                <label for="post-texxt">Texto</label>
-                <textarea rows="30" cols="60" id="post-prev" name="post-prev"></textarea>
+                <label for="texxt">Texto</label>
+                <textarea rows="30" cols="60" id="texxt" name="texxt"></textarea>
             </div>
             <div class="form"><button type="submit">Postar</button></div>  
         </form>
