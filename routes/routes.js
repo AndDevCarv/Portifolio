@@ -1,5 +1,5 @@
 import express from "express";
-import {addPost} from "../controllers/postControl.js"
+import {addPost, showPosts, showPostById} from "../controllers/postControl.js"
 
 const router = express.Router();
 
@@ -7,13 +7,9 @@ router.get("/", (req, res) => {
     res.render("index.ejs");
 })
 
-router.get("/blog.ejs", (req, res) => {
-    res.render("blog.ejs");
-})
+router.get("/blog.ejs", showPosts);
 
-router.get("/post.ejs", (req, res) => {
-    res.render("post.ejs")
-})
+router.get("/post/:id", showPostById);
 
 router.get("/createPost.ejs", (req, res) => {
     res.render("createPost.ejs")

@@ -10,20 +10,20 @@
     <main>
         <%- include("partials/header.ejs") %>
 
-        <form action="/add" method="post">
+        <form action=<%= post ? `/edit/${post.id}` : "/add" %> method="post">
             <div class="form title">
                 <label for="title">Título</label>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="title" name="title" required value="<%= post ? post.titulo : "" %>">
             </div>
 
             <div class="form prev">
                 <label for="prev">Prévia</label>
-                <textarea rows="3" cols="60" id="prev" name="prev"></textarea>
+                <textarea rows="3" cols="60" id="prev" name="prev"><%= post ? post.previa : "" %></textarea>
             </div>
 
             <div class="form texxt">
                 <label for="texxt">Texto</label>
-                <textarea rows="30" cols="60" id="texxt" name="texxt"></textarea>
+                <textarea rows="30" cols="60" id="texxt" name="texxt"><%= post ? post.conteudo : "" %></textarea>
             </div>
             <div class="form"><button type="submit">Postar</button></div>  
         </form>

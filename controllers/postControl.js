@@ -1,4 +1,4 @@
-import {insertPost} from "../models/postModel.js";
+import {insertPost, selectPost, selectPostById} from "../models/postModel.js";
 
 export async function addPost (req, res) {
     const {title, prev, texxt} = req.body;
@@ -11,4 +11,23 @@ export async function addPost (req, res) {
         res.status(500).send("Erro interno do servidor");
     }
 
+}
+
+export async function showPosts(req, res) {
+    try {
+        const posts = await selectPost();
+        res.render("blog.ejs", {posts});
+    } catch (error) {
+        console.log("Erro ao selecionar posts: " + error);
+    }
+}
+
+export async function showPostById(req, res) {
+    try {
+        const {id} = req.params;
+        const post = await selectPostById(id);
+        res.render("post.ejs", {post})
+    } catch (error) {
+        console.log("Erro ao receber parametros: " + error);
+    }
 }
