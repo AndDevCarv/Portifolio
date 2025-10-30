@@ -14,7 +14,7 @@
                 <h2><%- post.titulo %></h2>
                 <p><%- post.conteudo %></p>
                 <div class="button-box">
-                    <a href="createPost.ejs"><button class="edit-button">Editar</button></a>
+                    <a href="/edit/<%= post.id %>"><button class="edit-button">Editar</button></a>
                     <a><button class="delete-button">Deletar</button></a>
                 </div>
                 <footer class="post-footer">

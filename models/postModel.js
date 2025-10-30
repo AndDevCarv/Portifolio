@@ -26,5 +26,5 @@ export async function selectPostById(id) {
     } catch (error) {
         console.log("Erro ao fazer consulta: " + error);
     }
-    
 }
+

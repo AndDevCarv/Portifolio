@@ -26,7 +26,17 @@ export async function showPostById(req, res) {
     try {
         const {id} = req.params;
         const post = await selectPostById(id);
-        res.render("post.ejs", {post})
+        res.render("post.ejs", {post});
+    } catch (error) {
+        console.log("Erro ao receber parametros: " + error);
+    }
+}
+
+export async function showEditPost(req, res) {
+    try {
+        const {id} = req.params;
+        const post = await selectPostById(id);
+        res.render("createPost.ejs", {post: post || null})
     } catch (error) {
         console.log("Erro ao receber parametros: " + error);
     }

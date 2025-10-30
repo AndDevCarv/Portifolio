@@ -11,7 +11,7 @@
     <main>
         <section class="posts-section">
 
-            <a href="createPost.ejs"><button class="create-button">Criar post</button></a>
+            <a href="/add"><button class="create-button">Criar post</button></a>
             <% posts.forEach(post => { %>
             <article class="post">
                 <a href="/post/<%= post.id %>"><h2 class="post-title"><%- post.titulo %></h2></a>
